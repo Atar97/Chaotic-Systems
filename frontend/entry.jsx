@@ -1,1 +1,3 @@
-import Vectors from 'vector.js';
+import Vector from './physics/vector';
+
+window.Vector = Vector
