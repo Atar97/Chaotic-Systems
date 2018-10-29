@@ -1,6 +1,5 @@
 class Vector {
-    constructor(options) {
-        const {dimensions, vectors} = options;
+    constructor(vectors, dimensions) {
         this.components = []
         if (vectors) {
             this.components = Array.from(vectors)
@@ -11,34 +10,34 @@ class Vector {
             }
         }
         this.dimension = this.components.length
+        this.i = this.components[0]
+        this.j = this.components[1]
+        this.k = this.components[2]
+        this.c = this.components
     }
 
     static make2DVector(x, y) {
-        return new Vector({vectors: [x, y]})
+        return new Vector([x, y])
     } 
 
     length() {
         let squareSum = 0;
         this.components.forEach(comp => {
-            squareSum += comp*comp
+            squareSum += (comp*comp)
         })
         return Math.sqrt(squareSum)
     }
 
-    direction() {
-        
+    add(otherVector) {
+        if (this.dimension !== otherVector.dimension) {
+            return null 
+        }
+        const newComponents = [];
+        for (let i = 0; i < this.dimension; i++) {
+            newComponents.push(this.c[i] + otherVector.c[i])
+        }
+        return new Vector(newComponents)
     }
 }
-
-const vectors = []
-for (let i = 0; i < 5; i++) {
-    vectors.push(Vector.make2DVector(Math.random()*i, Math.random()*i))
-}
-
-vectors.push(new Vector({vectors: [10, -10]}))
-vectors.push(new Vector({vectors: [16, -2]}))
-vectors.push(new Vector({vectors: [3, 4]}))
-
-window.vectors = vectors
 
 export default Vector;
