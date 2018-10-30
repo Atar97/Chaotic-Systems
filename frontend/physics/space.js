@@ -49,6 +49,12 @@ class Space {
         return this
     }
 
+    drawAll(ctx) {
+        this.bodies.forEach(body => {
+            body.draw(ctx);
+        });
+    }
+
     toS() {
         
     }
@@ -56,23 +62,23 @@ class Space {
     stepAtInterval(interval) {
         let i = 0;
         setInterval(() => {
-            this.stepAll(1)
+            this.stepAll(.1)
+            this.drawAll()
             i++ 
-            if (i % 100 == 0) {
-                const sun1 = this.bodies[0].x.components;
-                const sun2 = this.bodies[1]
-                const sun2x = sun2.x.components;
-                // const distx = sun1[0] - sun2x[0]
-                // const disty = sun1[1] - sun2x[1]
-                // console.log(Math.sqrt(distx*distx + disty*disty))
-                // console.log(sun1)
-                console.log(sun2x)
-                console.log(sun2.v.dotProduct(sun2.a))
-                // console.log()
-                // const pos = this.bodies[1].x.components
-                const distance = Math.sqrt(sun2x[0]*sun2x[0] + sun2x[1]*sun2x[1])
-                console.log(distance)
-            }
+            // if (i % 100 == 0) {
+            //     const sun1 = this.bodies[0].x.components;
+            //     const sun2 = this.bodies[1]
+            //     const sun2x = sun2.x.components;
+            //     // const distx = sun1[0] - sun2x[0]
+            //     // const disty = sun1[1] - sun2x[1]
+            //     // console.log(Math.sqrt(distx*distx + disty*disty))
+            //     // console.log(sun1)
+            //     console.log(sun2x)
+            //     console.log(sun2.v.dotProduct(sun2.a))
+            //     // console.log()
+            //     // const pos = this.bodies[1].x.components
+            //     const distance = Math.sqrt(sun2x[0]*sun2x[0] + sun2x[1]*sun2x[1])
+            // }
         }, interval)
     }
 }
