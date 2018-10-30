@@ -44,6 +44,18 @@ class Vector {
         return this.add(otherVector.scale(-1))
     }
 
+    abs() {
+        return new Vector(this.components.map(comp => Math.abs(comp)))
+    }
+
+    dotProduct(otherVector) {
+        let result = 0;
+        for (let i = 0; i < this.dimension; i++) {
+            result += this.components[i]*otherVector.components[i]
+        }
+        return result
+    }
+
 }
 
 export default Vector;
