@@ -12,7 +12,7 @@ class Vector {
         this.dimension = this.components.length
     }
 
-    length() {
+    magnitude() {
         let squareSum = 0;
         this.components.forEach(comp => {
             squareSum += (comp*comp)
@@ -39,6 +39,11 @@ class Vector {
     scale(scalar) {
         return new Vector(this.scalarMultiply(scalar))
     }
+
+    subtract(otherVector) {
+        return this.add(otherVector.scale(-1))
+    }
+
 }
 
 export default Vector;
