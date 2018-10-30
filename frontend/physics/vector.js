@@ -10,15 +10,7 @@ class Vector {
             }
         }
         this.dimension = this.components.length
-        this.i = this.components[0]
-        this.j = this.components[1]
-        this.k = this.components[2]
-        this.c = this.components
     }
-
-    static make2DVector(x, y) {
-        return new Vector([x, y])
-    } 
 
     length() {
         let squareSum = 0;
@@ -34,9 +26,18 @@ class Vector {
         }
         const newComponents = [];
         for (let i = 0; i < this.dimension; i++) {
-            newComponents.push(this.c[i] + otherVector.c[i])
+            newComponents.push(this.components[i] + otherVector.components[i])
         }
         return new Vector(newComponents)
+    }
+
+    scalarMultiply(num) {
+        return this.components.map(comp => {
+            return comp*num
+        })
+    }
+    scale(scalar) {
+        return new Vector(this.scalarMultiply(scalar))
     }
 }
 

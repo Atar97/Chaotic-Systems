@@ -1,17 +1,11 @@
-import Vector from './vector'
+import CBody from './c_body';
+import Vector from './vector';
 
-const vectors = []
-for (let i = 0; i < 5; i++) {
-    vectors.push(Vector.make2DVector(Math.random() * i, Math.random() * i))
+const bodies = []
+bodies.push(new CBody(5, new Vector([100]), new Vector([0]), new Vector([-9.8])))
+
+window.bodies = bodies 
+
+for (let i = 0; i < 10; i++) {
+    bodies[0].updateAcceleration(new Vector([1]))
 }
-
-vectors.push(new Vector([10, -10]))
-vectors.push(new Vector([16, -2]))
-vectors.push(new Vector([3, 4]))
-
-vectors.forEach(vector => {
-    console.log(vector.components)
-    console.log(vector.length())
-})
-
-window.vectors = vectors
