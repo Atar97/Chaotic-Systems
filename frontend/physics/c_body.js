@@ -16,9 +16,9 @@ class CBody {
 
     move(t) {
         const vX = this.v.scale(t)
-        const aX = this.a.scale(t*t)
-        this.s = this.s.add(aX).add(vX)
+        const aX = this.a.scale(t*t*.5)
         this.v = this.v.add(this.a.scale(t))
+        this.s = this.s.add(aX).add(vX)
         return this 
     }
 
@@ -43,6 +43,7 @@ class CBody {
 
     resetForce() {
         this.f = new Vector([0,0])
+        this.a = new Vector([0,0])
         return this
     }
 
