@@ -1,11 +1,10 @@
 import Vector from './vector'
 
 class CBody {
-    constructor(mass, initPos, initVel, initAcc) {
+    constructor(mass, initPos, initVel) {
         this.mass = mass || 1 
         this.s = initPos || new Vector([0, 0])
         this.v = initVel || new Vector([0, 0])
-        this.a = initAcc || new Vector([0, 0])
         this.f = new Vector([0,0])
         // G = 6.674E-11 N*m^2/kg^2
         // I am setting G to 1 and will scale it appropriately if I want to display actual data about how things are moving around
@@ -16,15 +15,11 @@ class CBody {
 
     move(t) {
         const vX = this.v.scale(t)
-        const aX = this.a.scale(t*t*.5)
-        this.v = this.v.add(this.a.scale(t))
+        const a = this.f.scale(1 / this.mass)
+        const aX = a.scale(t*t*.5)
+        this.v = this.v.add(a.scale(t))
         this.s = this.s.add(aX).add(vX)
         return this 
-    }
-
-    updateAcceleration() {
-        this.a = this.a.add(this.f.scale(1 / this.mass))
-        return this
     }
 
     calculateForce(otherBody) {
@@ -55,8 +50,8 @@ class CBody {
             radius = 3;
         }
         return {
-            x: this.s.components[0] + canvasDimensions[0]/2,
-            y: this.s.components[1] + canvasDimensions[1]/2,
+            x: Math.floor(this.s.components[0] + canvasDimensions[0]/2),
+            y: Math.floor(this.s.components[1] + canvasDimensions[1]/2),
             radius
         }
     }

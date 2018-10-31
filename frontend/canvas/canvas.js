@@ -8,9 +8,17 @@ export default () => {
     const bodies = []
     bodies.push(new CBody(
         100000, new Vector([0, 0]), new Vector([0, 0]), new Vector([0, 0])))
-    bodies.push(new CBody(10, 
-        new Vector([ 0,-50]), 
-        new Vector([.005, 0]), 
+    bodies.push(new CBody(100000, 
+        new Vector([0, -99]), 
+        new Vector([0, 0]), 
+        new Vector([0,0])));
+    bodies.push(new CBody(100000, 
+        new Vector([0, 99]), 
+        new Vector([0, 0]), 
+        new Vector([0,0])));
+    bodies.push(new CBody(100000, 
+        new Vector([-101, 0]), 
+        new Vector([0, 0]), 
         new Vector([0,0])));
     const space = new Space(bodies)
     // space.drawAll(ctx);

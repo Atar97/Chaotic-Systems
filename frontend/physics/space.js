@@ -29,12 +29,6 @@ class Space {
         })
     }
 
-    updateAccelerations() {
-        this.bodies.forEach(body => {
-            body.updateAcceleration()
-        })
-    }
-
     resetForces() {
         this.bodies.forEach(body => {
             body.resetForce()
@@ -43,7 +37,6 @@ class Space {
 
     stepAll(t) {
         this.updateForces()
-        this.updateAccelerations()
         this.moveAll(t)
         this.resetForces()
         return this
