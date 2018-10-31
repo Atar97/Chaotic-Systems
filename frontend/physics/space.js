@@ -37,6 +37,7 @@ class Space {
 
     resetForces() {
         this.bodies.forEach(body => {
+            console.log(body.f.components)
             body.resetForce()
         })
     }
@@ -50,6 +51,7 @@ class Space {
     }
 
     drawAll(ctx) {
+        ctx.clearRect(0, 0, 800, 500)
         this.bodies.forEach(body => {
             body.draw(ctx);
         });
@@ -59,11 +61,13 @@ class Space {
         
     }
 
-    stepAtInterval(interval) {
+    stepAtInterval(interval, ctx) {
         let i = 0;
         setInterval(() => {
-            this.stepAll(.1)
-            this.drawAll()
+            this.stepAll(1)
+            if (i % 1 === 0) {
+                this.drawAll(ctx)
+            }
             i++ 
             // if (i % 100 == 0) {
             //     const sun1 = this.bodies[0].x.components;

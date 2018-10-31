@@ -53,7 +53,6 @@ class CBody {
         } else if (radius < 3) {
             radius = 3;
         }
-        debugger;
         return {
             x: this.s.components[0] + canvasDimensions[0]/2,
             y: this.s.components[1] + canvasDimensions[1]/2,
