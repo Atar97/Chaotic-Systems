@@ -10,7 +10,7 @@ The n-body problem is a classic problem in physics concerning the relationship o
 - **1.1 Vector Class**
 
     - basically just all the functionality from an *R***2** vector
-    - addition, unit vectors, length, direction
+    - addition, unit vectors, length, direction 
 
 - **1.2 Body Class** 
 
