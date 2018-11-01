@@ -21,8 +21,6 @@ const c = {
     }
 };
 
-// all of these are in si units
-
 planets.forEach(planet => {
     c.scalePlanet(planet)
 })

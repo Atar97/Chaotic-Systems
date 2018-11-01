@@ -12,7 +12,7 @@ class CBody {
         this.G = constants.scaleG(
             constants.solarMass,
             constants.AU, 
-            c.week);
+            3600);
     }
 
     move(t) {
@@ -47,15 +47,15 @@ class CBody {
     canvasTransform(canvasDimensions) {
         let radius;
         if (this.mass < 0.000004) {
-          radius = 3;
+          radius = 1;
         } else if (this.mass < .001) {
-          radius = 6;
+          radius = 2;
         } else if (this.mass <= .6) {
-            radius = 9
+            radius = 3
         } else if (this.mass <= 1) {
-            radius = 12
+            radius = 4
         } else {
-            radius = 15
+            radius = 5
         }
         return {
             x: (this.s.components[0]*10 + canvasDimensions[0]/2),
@@ -64,8 +64,8 @@ class CBody {
         }
     }
 
-    draw(ctx) {
-        const {x, y, radius} = this.canvasTransform([800, 500]);
+    draw(ctx, dimensions) {
+        const {x, y, radius} = this.canvasTransform(dimensions);
         ctx.beginPath();
         ctx.arc(x, y, radius, 0, 2*Math.PI);
         ctx.fillStyle = this.color;
