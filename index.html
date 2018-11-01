@@ -6,13 +6,26 @@
         <title>Chaotic Systems</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" 
+            media="screen" href="./assets/reset.css" />
+        <link rel="stylesheet" type="text/css" 
             media="screen" href="./assets/main.css" />
         <script src="./bundle.js"></script>
     </head>
     <body>
-        <div class="canvas-container">
-            <canvas width="800" height="500" id="background"></canvas>
-            <canvas width="800" height="500" id="bodies"></canvas>
-        </div>  
+        <div className="all-content">
+            <div class="canvas-container">
+                <canvas width="800" height="500" id="background"></canvas>
+                <canvas width="800" height="500" id="bodies"></canvas>
+            </div>  
+            <div class="user-inputs">
+                <form className="add-body">
+                    <input placeholder="mass" type="number">
+                    </input>
+                    <label>
+                        in solar masses 
+                    </label>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
