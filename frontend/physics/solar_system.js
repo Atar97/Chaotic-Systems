@@ -22,6 +22,8 @@ class SolarSystem extends Space {
     constructor(context, dimensions) {
         super(context, dimensions, solarSystem)
     }
+
+    
 }
 
 

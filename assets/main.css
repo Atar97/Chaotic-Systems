@@ -39,11 +39,11 @@ a:hover {
 
 .home-link {
     color: white;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .home-link i {
-    margin-right: 3px;
+    margin-right: 10px;
 }
 
 button {

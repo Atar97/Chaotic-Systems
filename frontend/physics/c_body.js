@@ -3,7 +3,7 @@ import constants from './constants';
 window.c = constants
 
 class CBody {
-    constructor(mass, initPos, initVel, color) {
+    constructor(mass, initPos, initVel, color, canvasTransform) {
         this.mass = mass || 1 
         this.s = initPos || new Vector([0, 0])
         this.v = initVel || new Vector([0, 0])
@@ -51,11 +51,15 @@ class CBody {
         } else if (this.mass < .001) {
           radius = 2;
         } else if (this.mass <= .6) {
-            radius = 3
+            radius = 3;
         } else if (this.mass <= 1) {
-            radius = 4
+            radius = 4;
+        } else if (this.mass < 10){
+            radius = 10;
+        } else if (this.mass < 50) {
+            radius = 20;
         } else {
-            radius = 5
+            radius = 30;
         }
         return {
             x: (this.s.components[0]*10 + canvasDimensions[0]/2),
