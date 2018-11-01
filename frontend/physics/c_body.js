@@ -1,5 +1,6 @@
 import Vector from './vector'
 import constants from './constants';
+window.c = constants
 
 class CBody {
     constructor(mass, initPos, initVel, color) {
@@ -8,7 +9,10 @@ class CBody {
         this.v = initVel || new Vector([0, 0])
         this.f = new Vector([0,0])
         this.color = color || 'yellow';
-        this.G = constants.solarSystemWeeksG;
+        this.G = constants.scaleG(
+            constants.solarMass,
+            constants.AU, 
+            3600);
     }
 
     move(t) {
