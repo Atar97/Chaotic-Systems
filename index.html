@@ -25,8 +25,8 @@
                 <canvas width="800" height="500" id="bodies"></canvas>
             </div>  
             <div class="user-inputs">
-                <h3>Add a Celestial Body</h3>
-                <form class="add-body" id="celestial-bodies"> 
+                <form id="celestial-bodies"> 
+                    <h3>Add a Celestial Body</h3>
                     <label class="form-row">Mass
                         <div>
                             <input placeholder="solar mass" type="number" max="1000" min="1" id="mass">
@@ -66,6 +66,27 @@
 
                     <button class="submit" id="make-celestial-body">
                     Make A Celestial Body</button>
+                </form>
+                <form id="add-star">
+                    <h3>Add a Star</h3>
+                    <label class="form-row">Initial Position
+                        <div>
+                            <input type="number" min="-400" max="400" 
+                            class="vector-input" placeholder="x"
+                            id="star-six"></input>
+                            <input type="number" min="-250" max="250" 
+                            class="vector-input" placeholder="y"
+                            id="star-siy"></input>
+                        </div>
+                        <label class="form-row">Star Type
+                            <select id="star-type">
+                                <option value="yellow">Yellow Dwarf</option>
+                                <option value="yellow">Blue Giant</option>
+                                <option value="blue">Blue SuperGiant</option>
+                                <option value="orange">Red Dwarf</option>
+                                <option value="green">green</option>
+                            </select>
+                    </label>
                 </form>
             </div>
         </div>

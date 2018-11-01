@@ -1,5 +1,5 @@
-import Vector from './physics/vector';
-import CBody from './physics/c_body';
+import Vector from '../physics/vector';
+import CBody from '../physics/c_body';
 
 export default class BodyForm {
 
@@ -18,7 +18,6 @@ export default class BodyForm {
         const vi = this.getVelocity()
         const color = document.getElementById("planet-color").value
         const body = new CBody(mass, si, vi, color)
-        console.log(body)
         this.space.add(body)
     }
     

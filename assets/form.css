@@ -20,6 +20,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 25px;
 }
 
 input {
@@ -63,7 +64,6 @@ input:focus {
 }
 
 .submit {
-    background: #9B59B6;
     border-radius: 3px;
     border: 1px solid #AEB6BF;
     padding: 10px 5px;
