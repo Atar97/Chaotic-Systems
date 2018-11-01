@@ -3,27 +3,65 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
         <title>Chaotic Systems</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" 
-            media="screen" href="./assets/reset.css" />
-        <link rel="stylesheet" type="text/css" 
-            media="screen" href="./assets/main.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="./assets/reset.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="./assets/main.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="./assets/form.css" />
         <script src="./bundle.js"></script>
     </head>
     <body>
-        <div className="all-content">
+        <nav>
+            <div class='Nav Links'>
+                <a class='home-link' href='#'><i class="fas fa-user-astronaut"></i>Home</a>
+                <a href='#'>Solar System</a>
+                <a href='#'>Gravity!</a>
+            </div>
+        </nav>
+        <div class="all-content">
             <div class="canvas-container">
-                <canvas width="800" height="500" id="background"></canvas>
                 <canvas width="800" height="500" id="bodies"></canvas>
             </div>  
             <div class="user-inputs">
-                <form className="add-body">
-                    <input placeholder="mass" type="number">
-                    </input>
-                    <label>
-                        in solar masses 
+                <h3>Add a Celestial Body</h3>
+                <form class="add-body"> 
+                    <label class="form-row">Mass
+                        <div>
+                            <input placeholder="solar mass" type="number" max="1000" min="1" id="mass">
+                            </input><i class="far fa-dot-circle"></i>
+                        </div> 
                     </label>
+                    <label class="form-row">Initial Position
+                        <div>
+                            <input type="number" min="-400" max="400" 
+                            class="vector-input" placeholder="x"></input>
+                            <input type="number" min="-250" max="250" 
+                            class="vector-input" placeholder="y"></input>
+                        </div>
+                    </label>
+                    <label class="form-row">Initial Velocity
+                        <div>
+                            <input type="number" min="-400" max="400" 
+                            class="vector-input" placeholder="x"></input>
+                            <input type="number" min="-250" max="250" 
+                            class="vector-input" placeholder="y"></input>
+                        </div>
+                    </label>
+
+                    <label class="form-row">Color
+                        <select id="planet-color">
+                            <option>Red</option>
+                            <option>yellow</option>
+                            <option>blue</option>
+                            <option>orange</option>
+                            <option>green</option>
+                        </select>
+                    </label>
+
+                    <button class="submit" id="make-celestial-body">
+                    Make A Celestial Body</button>
                 </form>
             </div>
         </div>

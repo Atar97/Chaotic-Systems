@@ -1,33 +1,50 @@
 .all-content {
-    /* height: 100%; */
-    /* position: relative; */
-    display: flex;
+    display: inline-flex;
+    padding: 25px;
+    flex-wrap: wrap;
 }
 
 body {
-    /* background-image: url('../assets/astrology-astronomy-clouds-1142950.jpg'); */
-    /* background-image: url('../assets/astronomy-constellation-cosmos-1248157.jpg'); */
     background-image: url('../assets/astronomy-black-wallpaper-constellation-2150.jpg');
     background-size: 100%;
     background-repeat: repeat-y
-    /* height: 4000px; */
 }
 
 .canvas-container {
-    position: relative;
-    width: 800px;
-    height: 500px;
-    margin: 15px auto;
+    width: 810px;
+    height: 510px;
+    display: block;
+    background: rgba(0,0,0,.9)
+    
 }
 
-canvas {
-    position: absolute;
-    display: inherit;
+nav {
+    background-color: black;
+    color: white;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
 }
 
-.user-inputs {
-    border: 1px solid red;
-    /* position: absolute; */
-    top: 0;
-    right: 10%;
+nav a {
+    font-family: herculanum, fantasy;
+    text-decoration: none;
+    margin-right: 5px;
+    color: #AEB6BF;
+}
+
+nav a:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.home-link {
+    color: white;
+    font-size: 20px;
+}
+
+.home-link i {
+    margin-right: 3px;
 }

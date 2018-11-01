@@ -1,0 +1,80 @@
+.user-inputs {
+    margin-left: 15px;
+    padding: 10px 0px;
+    min-width: 350px;
+    background: rgba(255,255,255,.8);
+    border-radius: 5px;
+    color: black;
+}
+
+.user-inputs h3 {
+    font-size: 22px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #AEB6BF;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    padding: 3px 15px;
+    font-size: 14px;
+    border-radius: 3px;
+    height: 24px;
+    border: 1px solid #AEB6BF;
+    /* font-family: fantasy; */
+    
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #FCF3CF;
+}
+
+.vector-input {
+    width: 35px;
+    text-align: center;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+    width: 90%;
+}
+
+#planet-color {
+    width: 137px;
+    /* font-family: fantasy; */
+    height: 30px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#mass {
+    width: 87px;
+}
+
+.submit {
+    background: #9B59B6;
+    border-radius: 3px;
+    border: 1px solid #AEB6BF;
+    padding: 10px 5px;
+    box-shadow: 2px 2px 5px #AEB6BF;
+}
+
+.submit:focus {
+    outline: none;
+}
+
+.submit:active {
+    box-shadow: none;
+}
+
