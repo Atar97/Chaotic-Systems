@@ -1,27 +1,29 @@
 import Vector from './physics/vector';
 import CBody from './physics/c_body';
 
-class UserForm {
+export default class BodyForm {
 
     constructor(space) {
         this.space = space
-        const form = document.getElementById("celestial - bodies");
-        form.addEventListener('submit', (this.space) => {
-            this.submit(space)
+        const form = document.getElementById("celestial-bodies");
+        form.addEventListener('submit', (e) => {
+            this.submit(e)
         })
     }
 
-    submit(space) {
+    submit(event) {
+        event.preventDefault();
         const mass = this.getMass()
         const si = this.getPosition()
         const vi = this.getVelocity()
-        const color = document.getElementById("planet-color")
+        const color = document.getElementById("planet-color").value
         const body = new CBody(mass, si, vi, color)
-        space.add(body)
+        console.log(body)
+        this.space.add(body)
     }
     
     getMass() {
-        const mass = Number(document.getElementById("mass").value);
+        let mass = Number(document.getElementById("mass").value);
         if (mass < 1) {
             mass = 1;
         }
@@ -35,8 +37,8 @@ class UserForm {
     }
     
     getVelocity() {
-        const vix = Number(document.getElementById("vix").value);
-        const viy = Number(document.getElementById("viy").value);
+        const vix = Number(document.getElementById("vix").value)/1000;
+        const viy = Number(document.getElementById("viy").value)/1000;
         return new Vector([vix, viy]);
     }
 }

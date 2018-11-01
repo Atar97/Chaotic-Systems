@@ -2,6 +2,7 @@ import Space from './physics/space';
 import Vector from './physics/vector';
 import CBody from './physics/c_body';
 import drawBodies from "./canvas/bodies";
+import BodyForm from './body_form'
 
 document.addEventListener("DOMContentLoaded", () => {
     const bodies = [];
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
           -80
         ]), new Vector([0.005, 0]), "green"));
     const space = new Space(bodies);
+    const form = new BodyForm(space)
     drawBodies(space);
 })
 
