@@ -12,7 +12,7 @@ class CBody {
         this.G = constants.scaleG(
             constants.solarMass,
             constants.AU, 
-            3600);
+            c.week);
     }
 
     move(t) {

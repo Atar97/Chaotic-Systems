@@ -16,7 +16,6 @@ export default class BodyForm {
         const mass = this.getMass()
         const si = this.getPosition()
         const vi = this.getVelocity()
-        debugger;
         const color = document.getElementById("planet-color").value
         const body = new CBody(mass, si, vi, color)
         this.space.add(body)
