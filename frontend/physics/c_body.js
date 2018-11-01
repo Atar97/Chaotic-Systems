@@ -1,16 +1,17 @@
 import Vector from './vector'
 
 class CBody {
-    constructor(mass, initPos, initVel) {
+    constructor(mass, initPos, initVel, color) {
         this.mass = mass || 1 
         this.s = initPos || new Vector([0, 0])
         this.v = initVel || new Vector([0, 0])
         this.f = new Vector([0,0])
+        this.color = color || 'yellow';
         // G = 6.674E-11 N*m^2/kg^2
         // I am setting G to 1 and will scale it appropriately if I want to display actual data about how things are moving around
         // my G is in ED from the sun ^3 / solar masses * s^2
+        // this.G = 0.0000000395;
         this.G = 0.0000000395;
-        // this.G = 
     }
 
     move(t) {
@@ -43,15 +44,15 @@ class CBody {
     }
 
     canvasTransform(canvasDimensions) {
-        let radius = this.mass 
+        let radius = Math.round(this.mass / 10000)
         if (radius > 20) {
             radius = 20;
         } else if (radius < 3) {
             radius = 3;
         }
         return {
-            x: Math.floor(this.s.components[0] + canvasDimensions[0]/2),
-            y: Math.floor(this.s.components[1] + canvasDimensions[1]/2),
+            x: this.s.components[0] + canvasDimensions[0]/2,
+            y: this.s.components[1] + canvasDimensions[1]/2,
             radius
         }
     }
@@ -60,7 +61,8 @@ class CBody {
         const {x, y, radius} = this.canvasTransform([800, 500]);
         ctx.beginPath();
         ctx.arc(x, y, radius, 0, 2*Math.PI);
-        ctx.stroke();
+        ctx.fillStyle = this.color;
+        ctx.fill()
     }
 
 }
