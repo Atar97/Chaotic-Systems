@@ -1,5 +1,15 @@
 const planets = []
 
+const sun = {
+    name: 'Sun',
+    mass: Number('2E30'),
+    orbit: 0,
+    orbitSpeed: 0,
+    color: 'yellow',
+    order: 0,
+}
+planets.push(sun)
+
 const mercury = {
     name: 'Mercury',
     orbit: Number('5.79e10'),

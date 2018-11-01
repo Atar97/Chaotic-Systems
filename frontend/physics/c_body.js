@@ -58,8 +58,8 @@ class CBody {
             radius = 15
         }
         return {
-            x: this.s.components[0] + canvasDimensions[0]/2,
-            y: this.s.components[1] + canvasDimensions[1]/2,
+            x: (this.s.components[0]*10 + canvasDimensions[0]/2),
+            y: (this.s.components[1]*10 + canvasDimensions[1]/2),
             radius
         }
     }
