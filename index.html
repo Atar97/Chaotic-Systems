@@ -26,7 +26,7 @@
             </div>  
             <div class="user-inputs">
                 <h3>Add a Celestial Body</h3>
-                <form class="add-body"> 
+                <form class="add-body" id="celestial-bodies"> 
                     <label class="form-row">Mass
                         <div>
                             <input placeholder="solar mass" type="number" max="1000" min="1" id="mass">
@@ -36,17 +36,21 @@
                     <label class="form-row">Initial Position
                         <div>
                             <input type="number" min="-400" max="400" 
-                            class="vector-input" placeholder="x"></input>
+                            class="vector-input" placeholder="x"
+                            id="six"></input>
                             <input type="number" min="-250" max="250" 
-                            class="vector-input" placeholder="y"></input>
+                            class="vector-input" placeholder="y"
+                            id="siy"></input>
                         </div>
                     </label>
                     <label class="form-row">Initial Velocity
                         <div>
                             <input type="number" min="-400" max="400" 
-                            class="vector-input" placeholder="x"></input>
+                            class="vector-input" placeholder="x" 
+                            id="vix"></input>
                             <input type="number" min="-250" max="250" 
-                            class="vector-input" placeholder="y"></input>
+                            class="vector-input" placeholder="y"
+                            id="viy"></input>
                         </div>
                     </label>
 
