@@ -5,7 +5,7 @@ import { setInterval } from "timers";
 // Earth Mass = 3E-6 solar masses 
 // G = 3.95E-8
 class Space {
-    constructor(bodies = [], context, dimensions) {
+    constructor(context, dimensions, bodies = []) {
         this.bodies = bodies
         this.ctx = context 
         this.dimensions = dimensions
@@ -49,10 +49,6 @@ class Space {
         this.bodies.forEach(body => {
             body.draw(this.ctx, this.dimensions);
         });
-    }
-
-    toS() {
-        
     }
 
     stepAtInterval(interval) {

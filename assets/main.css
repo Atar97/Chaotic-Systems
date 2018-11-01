@@ -1,4 +1,4 @@
-.gravity-playground {
+#gravity-playground {
     display: inline-flex;
     padding: 25px;
     flex-wrap: wrap;
@@ -11,11 +11,7 @@ body {
 }
 
 .canvas-container {
-    width: 810px;
-    height: 510px;
-    display: block;
-    background: rgba(0,0,0,.9)
-    
+    background: rgba(0,0,0,.9);
 }
 
 nav {
@@ -26,16 +22,17 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
+    font-family: herculanum, fantasy;
 }
 
-nav a {
+a {
     font-family: herculanum, fantasy;
     text-decoration: none;
     margin-right: 5px;
     color: #AEB6BF;
 }
 
-nav a:hover {
+a:hover {
     color: white;
     cursor: pointer;
 }
