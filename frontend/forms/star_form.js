@@ -14,8 +14,10 @@ export default class StarForm {
     submit(event) {
         event.preventDefault()
         const si = this.getPosition();
-        const vi = new Vector([0, .0001])  
-        const body = new CBody(mass, si, vi, color)      
+        const vi = new Vector([0, 0])
+        const type = this.getType()  
+        const body = new CBody(type.mass, si, vi, type.color)     
+        this.space.add(body) 
     }
 
     getPosition() {
@@ -25,6 +27,28 @@ export default class StarForm {
     }
 
     getType() {
-        const type = document.getElementById("star-type")
+        const type = document.getElementById("star-type").value 
+        switch (type) {
+            case 'yd':
+                return {
+                    mass: 1,
+                    color: 'yellow'
+                }
+            case 'bg':
+                return {
+                    mass: 10,
+                    color: 'blue'
+                }
+            case 'bsg':
+                return {
+                    mass: 60,
+                    color: 'blue'
+                }
+            case 'rd':
+                return {
+                    mass: .5,
+                    color: 'red'
+                }
+        }
     }
 }

@@ -48,3 +48,7 @@ nav a:hover {
 .home-link i {
     margin-right: 3px;
 }
+
+button {
+    font-family: fantasy;
+}

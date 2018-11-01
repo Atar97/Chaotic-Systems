@@ -66,8 +66,21 @@ input:focus {
 .submit {
     border-radius: 3px;
     border: 1px solid #AEB6BF;
-    padding: 10px 5px;
+    padding: 10px 2px 5px;
     box-shadow: 2px 2px 5px #AEB6BF;
+    width: 150px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.body-button {
+    color: white;
+    background-color: black;
+}
+
+.star-button {
+    color: black;
+    background-color: #F7DC6F;
 }
 
 .submit:focus {

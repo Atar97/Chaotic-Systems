@@ -11,7 +11,7 @@ class CBody {
         // I am setting G to 1 and will scale it appropriately if I want to display actual data about how things are moving around
         // my G is in ED from the sun ^3 / solar masses * s^2
         // this.G = 0.0000000395;
-        this.G = 0.0000000395;
+        this.G = .01;
     }
 
     move(t) {
@@ -44,11 +44,17 @@ class CBody {
     }
 
     canvasTransform(canvasDimensions) {
-        let radius = Math.round(this.mass / 10000)
-        if (radius > 20) {
-            radius = 20;
-        } else if (radius < 3) {
-            radius = 3;
+        let radius;
+        if (this.mass < 0.000004) {
+          radius = 3;
+        } else if (this.mass < .001) {
+          radius = 6;
+        } else if (this.mass <= .6) {
+            radius = 9
+        } else if (this.mass <= 1) {
+            radius = 12
+        } else {
+            radius = 15
         }
         return {
             x: this.s.components[0] + canvasDimensions[0]/2,

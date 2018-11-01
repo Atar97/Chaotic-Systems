@@ -29,8 +29,7 @@
                     <h3>Add a Celestial Body</h3>
                     <label class="form-row">Mass
                         <div>
-                            <input placeholder="solar mass" type="number" max="1000" min="1" id="mass">
-                            </input><i class="far fa-dot-circle"></i>
+                            <input placeholder="solar mass" type="text" id="mass"></input><i class="far fa-dot-circle"></i>
                         </div> 
                     </label>
                     <label class="form-row">Initial Position
@@ -64,10 +63,9 @@
                         </select>
                     </label>
 
-                    <button class="submit" id="make-celestial-body">
-                    Make A Celestial Body</button>
+                    <button class="submit body-button">Create Body</button>
                 </form>
-                <form id="add-star">
+                <form id="star-form">
                     <h3>Add a Star</h3>
                     <label class="form-row">Initial Position
                         <div>
@@ -78,16 +76,19 @@
                             class="vector-input" placeholder="y"
                             id="star-siy"></input>
                         </div>
-                        <label class="form-row">Star Type
-                            <select id="star-type">
-                                <option value="yellow">Yellow Dwarf</option>
-                                <option value="yellow">Blue Giant</option>
-                                <option value="blue">Blue SuperGiant</option>
-                                <option value="orange">Red Dwarf</option>
-                                <option value="green">green</option>
-                            </select>
                     </label>
+                    <label class="form-row">Star Type
+                        <select id="star-type">
+                            <option value="yd">Yellow Dwarf</option>
+                            <option value="bg">Blue Giant</option>
+                            <option value="bsg">Blue SuperGiant</option>
+                            <option value="rd">Red Dwarf</option>
+                        </select>
+                    </label>
+                    <button class="submit star-button">Create Star</button>
                 </form>
+
+
             </div>
         </div>
     </body>
