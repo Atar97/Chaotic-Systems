@@ -1,4 +1,5 @@
 import Vector from './vector'
+import constants from './constants';
 
 class CBody {
     constructor(mass, initPos, initVel, color) {
@@ -7,11 +8,7 @@ class CBody {
         this.v = initVel || new Vector([0, 0])
         this.f = new Vector([0,0])
         this.color = color || 'yellow';
-        // G = 6.674E-11 N*m^2/kg^2
-        // I am setting G to 1 and will scale it appropriately if I want to display actual data about how things are moving around
-        // my G is in ED from the sun ^3 / solar masses * s^2
-        // this.G = 0.0000000395;
-        this.G = .01;
+        this.G = constants.solarSystemWeeksG;
     }
 
     move(t) {
