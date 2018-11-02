@@ -9,21 +9,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="./assets/reset.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="./assets/main.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="./assets/form.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="./assets/playground.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="./assets/solar_system.css" />
         <script src="./bundle.js"></script>
     </head>
     <body>
         <nav>
-            <div class='Nav Links'>
+            <div class='Nav Links' id='top'>
                 <a class='home-link' href='#'><i class="fas fa-user-astronaut"></i>Home</a>
                 <a href='#our-solar-system'>Solar System</a>
                 <a href='#gravity-playground'>Gravity!</a>
             </div>
         </nav>
-        <section>
-
+        <section class="introduction text">
+            <p>Gravity is all around us - it has been studied by the best minds in physics for centuries. From Newton to Einstein everyone got a piece. Hopefully this site will allow you to understand how gravity works in our solar system or even in other parts of space!</p>
         </section>
+        <header class="solar-header">
+            <h3>Gravity Playground</h3>
+            <div class='links'>
+                <a href='#top'>Home</a>
+            </div>
+        </header>
+        <p class='text'>In the gravity playground you can add celestial bodies of differing masses, velocities, and initial positions. You can see if 2 bodies get too close they spin off to infinity. Try to make your own solar system or create semi-stable binary star systems - the universe is yours to command</p>
+        <div class='playground-buttons'>
+            <button><strong>Start Simulation</strong>
+            <i class="far fa-play-circle"></i></button>
+            <button><strong>Pause Simulation</strong>
+            <i class="far fa-pause-circle"></i></button>
+            <button><strong>Reset Simulation</strong>
+            <i class="fas fa-redo-alt"></i></button>
+        </div>
         <section id="gravity-playground">
             <div class="canvas-container">
                 <canvas width="800" height="500" id="bodies"></canvas>

@@ -1,17 +1,7 @@
-#gravity-playground {
-    display: inline-flex;
-    padding: 25px;
-    flex-wrap: wrap;
-}
-
 body {
     background-image: url('../assets/astronomy-black-wallpaper-constellation-2150.jpg');
     background-size: 100%;
     background-repeat: repeat-y
-}
-
-.canvas-container {
-    background: rgba(0,0,0,.9);
 }
 
 nav {
@@ -48,4 +38,23 @@ a:hover {
 
 button {
     font-family: fantasy;
+}
+
+.canvas-container {
+    background: rgba(0,0,0,.9);
+}
+
+.introduction {
+    margin: 10px 10%;
+}
+
+.text {
+    background-color: rgba(255, 255, 255, .7);
+    padding: 25px;
+}
+
+p {
+    font-family: Didot, serif;
+    font-size: 18px;
+    line-height: 20px;
 }

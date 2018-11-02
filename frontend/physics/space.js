@@ -9,6 +9,7 @@ class Space {
         this.bodies = bodies
         this.ctx = context 
         this.dimensions = dimensions
+        this.interval = null
     }
 
     add(cBody) {
@@ -53,11 +54,15 @@ class Space {
 
     stepAtInterval(interval) {
         let i = 0;
-        setInterval(() => {
+        this.interval = setInterval(() => {
             this.stepAll(5)
             this.drawAll()
             i++ 
         }, interval)
+    }
+
+    stopStepping() {
+        clearInterval(this.interval)
     }
 }
 
