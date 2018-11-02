@@ -31,15 +31,15 @@
             </div>
         </header>
         <p class='text'>In the gravity playground you can add celestial bodies of differing masses, velocities, and initial positions. You can see if 2 bodies get too close they spin off to infinity. Try to make your own solar system or create semi-stable binary star systems - the universe is yours to command</p>
-        <div class='playground-buttons'>
-            <button><strong>Start Simulation</strong>
-            <i class="far fa-play-circle"></i></button>
-            <button><strong>Pause Simulation</strong>
-            <i class="far fa-pause-circle"></i></button>
-            <button><strong>Reset Simulation</strong>
-            <i class="fas fa-redo-alt"></i></button>
-        </div>
         <section id="gravity-playground">
+            <div class='playground-buttons'>
+                <button id='start-sim'><strong>Start Simulation</strong>
+                <i class="far fa-play-circle"></i></button>
+                <button id='pause-sim'><strong>Pause Simulation</strong>
+                <i class="far fa-pause-circle"></i></button>
+                <button id='reset-sim'><strong>Reset Simulation</strong>
+                <i class="fas fa-redo-alt"></i></button>
+            </div>
             <div class="canvas-container">
                 <canvas width="800" height="500" id="bodies"></canvas>
             </div>  

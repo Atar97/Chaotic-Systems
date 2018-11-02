@@ -17,7 +17,8 @@ export default class StarForm {
         const vi = new Vector([0, 0])
         const type = this.getType()  
         const body = new CBody(type.mass, si, vi, type.color)     
-        this.space.add(body) 
+        this.space.add(body)
+        this.space.drawAll() 
     }
 
     getPosition() {
