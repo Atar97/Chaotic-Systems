@@ -62,7 +62,7 @@ class Space {
     }
 
     stopStepping() {
-        clearInterval(this.handle.id);
+        clearInterval(this.handle);
         this.handle = null;
     }
 }
