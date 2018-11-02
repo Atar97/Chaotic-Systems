@@ -1,7 +1,7 @@
 import Space from './physics/space';
 import BodyForm from './forms/body_form'
 import StarForm from './forms/star_form';
-import SolarSystem from './physics/solar_system';
+import SolarSystem from './solar_system/solar_system';
 import PlaygroundButtons from './forms/playground';
 
 document.addEventListener("DOMContentLoaded", () => {

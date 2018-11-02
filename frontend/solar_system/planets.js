@@ -7,20 +7,20 @@ const sun = {
   orbitSpeed: 0,
   color: "yellow",
   order: 0,
-  img:
-    'https://cdn.pixabay.com/photo/2015/06/26/18/48/mercury-822825_960_720.png'
+  img: ''
 };
 planets.push(sun)
 
 const mercury = {
-    name: 'Mercury',
-    orbit: Number('5.79e10'),
-    orbitSpeed: 47362,
-    mass: Number('3.3e23'),
-    color: '#F3D43C',
-    order: 1,
-    img: 'https://cdn.pixabay.com/photo/2015/06/26/18/48/mercury-822825_960_720.png'
-}
+  name: "Mercury",
+  orbit: Number("5.79e10"),
+  orbitSpeed: 47362,
+  mass: Number("3.3e23"),
+  color: "#F3D43C",
+  order: 1,
+  img:
+    "https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2015/whatsimporta.jpg"
+};
 planets.push(mercury)
 
 const venus = {
@@ -57,13 +57,14 @@ const mars = {
 planets.push(mars)
 
 const jupiter = {
-    name: "Jupiter",
-    orbit: Number("7.78e11"),
-    orbitSpeed: 13056,
-    mass: Number("1.89e27"),
-    color: '#D14C3A',
-    order: 5,
-    'https://en.wikipedia.org/wiki/Jupiter#/media/File:Jupiter_and_its_shrunken_Great_Red_Spot.jpg'
+  name: "Jupiter",
+  orbit: Number("7.78e11"),
+  orbitSpeed: 13056,
+  mass: Number("1.89e27"),
+  color: "#D14C3A",
+  order: 5,
+  img:
+    "https://media.mnn.com/assets/images/2016/06/jupiter-nasa.jpg.638x0_q80_crop-smart.jpg"
 };
 planets.push(jupiter)
 

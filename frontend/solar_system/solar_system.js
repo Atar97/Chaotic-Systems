@@ -20,11 +20,26 @@ const solarSystem = constants.planets.map(planet => {
 
 class SolarSystem extends Space {
     constructor(context, dimensions) {
+
         super(context, dimensions, solarSystem)
+        this.addEventListeners()
     }
 
-    appendDetails(planetIdx) {
-        
+    appendDetails(planetId) {
+        const planet = constants.planets[planetId]
+        debugger;
+        const planetDetail = document.getElementById('planet-detail')
+        planetDetail.getElementsByTagName('img')[0]
+        .setAttribute('src', planet.img)
+    }
+
+    addEventListeners() {
+        const planetList = document.getElementById('planet-list')
+        for (let i = 0; i < planetList.childElementCount; i++) {
+            planetList.children[i].addEventListener('click', event => {
+                this.appendDetails(event.currentTarget.getAttribute('planet'));
+            })
+        }
     }
 }
 

@@ -53,3 +53,8 @@
 .stretchy {
     width: 100%;
 }
+
+.planet-info img {
+    width: 350px;
+    height: 350px;
+}
