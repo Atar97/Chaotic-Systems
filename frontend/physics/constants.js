@@ -1,4 +1,4 @@
-import planets from './planets';
+import planets from '../solar_system/planets';
 
 const c = {
     G: Number("6.674e-11"),

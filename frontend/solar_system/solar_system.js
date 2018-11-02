@@ -1,7 +1,7 @@
-import CBody from './c_body';
-import Vector from './vector';
-import constants from './constants';
-import Space from './space';
+import CBody from '../physics/c_body';
+import Vector from '../physics/vector';
+import constants from '../physics/constants';
+import Space from '../physics/space';
 
 const solarSystem = constants.planets.map(planet => {
     let direction;
@@ -23,7 +23,9 @@ class SolarSystem extends Space {
         super(context, dimensions, solarSystem)
     }
 
-    
+    appendDetails(planetIdx) {
+        
+    }
 }
 
 
