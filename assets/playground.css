@@ -1,16 +1,15 @@
 #gravity-playground {
     display: flex;
     justify-content: center;
-    /* padding: 25px; */
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 0 auto 30px;
 }
 
 .user-inputs {
     padding: 10px 0px;
     min-width: 350px;
     background: rgba(255,255,255,.7);
-    border-radius: 5px;
+    border-radius: 0 5px 5px 0;
     color: black;
 }
 
@@ -58,12 +57,13 @@ input:focus {
     width: 90%;
 }
 
-#planet-color {
+.select {
     width: 137px;
     height: 30px;
     padding: 10px;
     font-size: 14px;
 }
+
 
 #mass {
     width: 87px;
@@ -101,6 +101,7 @@ input:focus {
     padding: 10px;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -110,9 +111,12 @@ input:focus {
     font-size: 20px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-left: 10px;
+    margin-top: 5px;
     border-radius: 5px;
     border: 3px solid white;
+    min-width: 250px;
 }
 
 .playground-buttons button:hover {

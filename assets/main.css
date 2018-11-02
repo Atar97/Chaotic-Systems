@@ -41,7 +41,8 @@ button {
 }
 
 .canvas-container {
-    background: rgba(0,0,0,.9);
+    background: rgba(0,0,0,.8);
+    border-radius: 5px 0 0 5px;
 }
 
 .introduction {
@@ -57,4 +58,23 @@ p {
     font-family: Didot, serif;
     font-size: 18px;
     line-height: 20px;
+}
+
+p > * {
+    font-family: Didot, serif;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-family: herculanum, fantasy;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h3 {
+    font-size: 35px;
+    margin: 10px;
 }

@@ -15,29 +15,29 @@
     </head>
     <body>
         <nav>
-            <div class='Nav Links' id='top'>
-                <a class='home-link' href='#'><i class="fas fa-user-astronaut"></i>Home</a>
-                <a href='#our-solar-system'>Solar System</a>
-                <a href='#gravity-playground'>Gravity!</a>
+            <div class="Nav Links" id="top">
+                <a class="home-link" href="#"><i class="fas fa-user-astronaut"></i>Home</a>
+                <a href="#our-solar-system">Solar System</a>
+                <a href="#gravity-playground">Gravity!</a>
             </div>
         </nav>
         <section class="introduction text">
             <p>Gravity is all around us - it has been studied by the best minds in physics for centuries. From Newton to Einstein everyone got a piece. Hopefully this site will allow you to understand how gravity works in our solar system or even in other parts of space!</p>
         </section>
-        <header class="solar-header">
+        <header>
             <h3>Gravity Playground</h3>
-            <div class='links'>
-                <a href='#top'>Home</a>
+            <div class="links">
+                <a href="#top">Home</a>
             </div>
         </header>
-        <p class='text'>In the gravity playground you can add celestial bodies of differing masses, velocities, and initial positions. You can see if 2 bodies get too close they spin off to infinity. Try to make your own solar system or create semi-stable binary star systems - the universe is yours to command</p>
+        <p class="text">In the gravity playground you can add celestial bodies of differing masses, velocities, and initial positions. You can see if 2 bodies get too close they spin off to infinity. Try to make your own solar system or create semi-stable binary star systems - the universe is yours to command</p>
         <section id="gravity-playground">
-            <div class='playground-buttons'>
-                <button id='start-sim'><strong>Start Simulation</strong>
+            <div class="playground-buttons">
+                <button id="start-sim"><strong>Start Simulation</strong>
                 <i class="far fa-play-circle"></i></button>
-                <button id='pause-sim'><strong>Pause Simulation</strong>
+                <button id="pause-sim"><strong>Pause Simulation</strong>
                 <i class="far fa-pause-circle"></i></button>
-                <button id='reset-sim'><strong>Reset Simulation</strong>
+                <button id="reset-sim"><strong>Reset Simulation</strong>
                 <i class="fas fa-redo-alt"></i></button>
             </div>
             <div class="canvas-container">
@@ -69,7 +69,7 @@
                     </label>
 
                     <label class="form-row">Color
-                        <select id="planet-color">
+                        <select class="select" id="planet-color">
                             <option value="red">red</option>
                             <option value="yellow">yellow</option>
                             <option value="blue">blue</option>
@@ -91,7 +91,7 @@
                         </div>
                     </label>
                     <label class="form-row">Star Type
-                        <select id="star-type">
+                        <select class="select" id="star-type">
                             <option value="yd">Yellow Dwarf</option>
                             <option value="bg">Blue Giant</option>
                             <option value="bsg">Blue SuperGiant</option>
@@ -103,17 +103,35 @@
             </div>
         </section>
         <section id="our-solar-system">
-            <header class="solar-header">
+            <header>
                 <h3>Welcome to Our Solar System</h3>
-                <div class='links'>
-                    <a href='#gravity-playground'>Gravity Playground</a>
+                <div class="links">
+                    <a href="#gravity-playground">Gravity Playground</a>
                 </div>
             </header>
-            <div class="solar-info">
-
+            <div class="solar-info text">
+                <p>Below you find a simulation showing our solar system, each pixel represents 10 AU (astronomical units) aka <strong>92 million</strong> miles.</p>
+                <p>You can notice that all our planets move in the same direction around the sun, and that the closests planets circle the fastest while Neptune and Uranus take many earth years to circle the sun</p>
             </div>
-            <div class="canvas-container">
-                <canvas width="800" height="750" id="solar-canvas"></canvas>
+            <div class="solar-container">
+                <div class="planet-info">
+                    <ul>
+                        <li>Mercury</li>
+                        <li>Venus</li>
+                        <li>Earth</li>
+                        <li>Mars</li>
+                        <li>Jupiter</li>
+                        <li>Saturn</li>
+                        <li>Uranus</li>
+                        <li>Neptune</li>
+                    </ul>
+                    <div class="planet-detail">
+                        <img src="https://cdn.pixabay.com/photo/2015/06/26/18/48/mercury-822825_960_720.png" width="120%"/>
+                    </div>
+                </div>
+                <div class="canvas-container stretchy">
+                    <canvas width="800" height="800" id="solar-canvas"></canvas>
+                </div>
             </div>
         </section>
 
