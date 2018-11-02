@@ -58,3 +58,9 @@
     width: 350px;
     height: 350px;
 }
+
+#planet-detail {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
