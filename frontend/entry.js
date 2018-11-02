@@ -1,9 +1,8 @@
 import Space from './physics/space';
-import Vector from './physics/vector';
-import CBody from './physics/c_body';
 import BodyForm from './forms/body_form'
 import StarForm from './forms/star_form';
-import SolarSystem from './physics/solar_system';
+import SolarSystem from './solar_system/solar_system';
+import PlaygroundButtons from './forms/playground';
 
 document.addEventListener("DOMContentLoaded", () => {
     const bodyContext = document.getElementById('bodies').getContext('2d');
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const solarSystem = new SolarSystem(solarContext, [1000,800])
     const bodyForm = new BodyForm(space)
     const starForm = new StarForm(space)
-    space.stepAtInterval(1)
-    solarSystem.stepAtInterval(2)
+    const playgroundButtons = new PlaygroundButtons(space)
+    solarSystem.stepAtInterval(1)
 })
 

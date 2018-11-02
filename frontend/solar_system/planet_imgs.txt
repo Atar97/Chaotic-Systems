@@ -1,0 +1,15 @@
+marcury => https://cdn.pixabay.com/photo/2015/06/26/18/48/mercury-822825_960_720.png
+
+venus => https://cdn.pixabay.com/photo/2011/12/13/14/39/venus-11022_960_720.jpg
+
+earth => https://cdn.pixabay.com/photo/2011/12/13/14/28/earth-11009_960_720.jpg
+
+mars => https://cdn.pixabay.com/photo/2011/12/13/14/30/mars-11012_960_720.jpg
+
+jupiter => https://en.wikipedia.org/wiki/Jupiter#/media/File:Jupiter_and_its_shrunken_Great_Red_Spot.jpg
+
+saturn => https://cdn.pixabay.com/photo/2012/11/28/10/54/saturn-67671_960_720.jpg
+
+uranus => https://cdn.pixabay.com/photo/2012/01/09/10/56/uranus-11625_960_720.jpg
+
+neptune => https://cdn.pixabay.com/photo/2012/11/28/09/17/neptune-67537_960_720.jpg

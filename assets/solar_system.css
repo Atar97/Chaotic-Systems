@@ -4,17 +4,63 @@
 
 }
 
-header {
-    background-color: black;
-    color: white;
-    padding: 15px;
-    font-family: herculanum, fantasy;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.solar-info {
+    padding: 15px 20%;
 }
 
-.solar-header h3 {
-    font-size: 35px;
-    margin: 10px;
+.solar-info strong {
+    font-style: italic;
+}
+
+.solar-container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.planet-info {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: rgba(0,0,0, .8);
+    border-left: 1px solid #AEB6BF;
+    min-width: 270px;
+    max-width: 600px;
+    padding: 0 10px;
+}
+
+.planet-info ul {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.planet-info li {
+    margin: 5px 10px;
+    width: 80px;
+    padding-bottom: 3px;
+    font-size: 20px;
+    border-bottom: 1px solid transparent;
+    text-align: center;
+}
+
+.planet-info li:hover {
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+
+.stretchy {
+    width: 100%;
+}
+
+.planet-info img {
+    width: 350px;
+    height: 350px;
+}
+
+#planet-detail {
+    display: flex;
+    position: relative;
+    justify-content: center;
 }
