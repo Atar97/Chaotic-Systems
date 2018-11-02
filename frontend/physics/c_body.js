@@ -1,17 +1,18 @@
 import Vector from './vector'
+import constants from './constants';
+window.c = constants
 
 class CBody {
-    constructor(mass, initPos, initVel, color) {
+    constructor(mass, initPos, initVel, color, canvasTransform) {
         this.mass = mass || 1 
         this.s = initPos || new Vector([0, 0])
         this.v = initVel || new Vector([0, 0])
         this.f = new Vector([0,0])
         this.color = color || 'yellow';
-        // G = 6.674E-11 N*m^2/kg^2
-        // I am setting G to 1 and will scale it appropriately if I want to display actual data about how things are moving around
-        // my G is in ED from the sun ^3 / solar masses * s^2
-        // this.G = 0.0000000395;
-        this.G = .01;
+        this.G = constants.scaleG(
+            constants.solarMass,
+            constants.AU, 
+            3600);
     }
 
     move(t) {
@@ -46,25 +47,29 @@ class CBody {
     canvasTransform(canvasDimensions) {
         let radius;
         if (this.mass < 0.000004) {
-          radius = 3;
+          radius = 1;
         } else if (this.mass < .001) {
-          radius = 6;
+          radius = 2;
         } else if (this.mass <= .6) {
-            radius = 9
+            radius = 3;
         } else if (this.mass <= 1) {
-            radius = 12
+            radius = 4;
+        } else if (this.mass < 10){
+            radius = 10;
+        } else if (this.mass < 50) {
+            radius = 20;
         } else {
-            radius = 15
+            radius = 30;
         }
         return {
-            x: this.s.components[0] + canvasDimensions[0]/2,
-            y: this.s.components[1] + canvasDimensions[1]/2,
+            x: (this.s.components[0]*10 + canvasDimensions[0]/2),
+            y: (this.s.components[1]*10 + canvasDimensions[1]/2),
             radius
         }
     }
 
-    draw(ctx) {
-        const {x, y, radius} = this.canvasTransform([800, 500]);
+    draw(ctx, dimensions) {
+        const {x, y, radius} = this.canvasTransform(dimensions);
         ctx.beginPath();
         ctx.arc(x, y, radius, 0, 2*Math.PI);
         ctx.fillStyle = this.color;

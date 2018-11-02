@@ -16,7 +16,6 @@ export default class BodyForm {
         const mass = this.getMass()
         const si = this.getPosition()
         const vi = this.getVelocity()
-        debugger;
         const color = document.getElementById("planet-color").value
         const body = new CBody(mass, si, vi, color)
         this.space.add(body)
@@ -37,8 +36,8 @@ export default class BodyForm {
     }
     
     getVelocity() {
-        const vix = Number(document.getElementById("vix").value)/1000;
-        const viy = Number(document.getElementById("viy").value)/1000;
+        const vix = Number(document.getElementById("vix").value);
+        const viy = Number(document.getElementById("viy").value);
         return new Vector([vix, viy]);
     }
 }

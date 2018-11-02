@@ -1,8 +1,15 @@
+#gravity-playground {
+    display: flex;
+    justify-content: center;
+    /* padding: 25px; */
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
 .user-inputs {
-    margin-left: 15px;
     padding: 10px 0px;
     min-width: 350px;
-    background: rgba(255,255,255,.8);
+    background: rgba(255,255,255,.7);
     border-radius: 5px;
     color: black;
 }
@@ -53,7 +60,6 @@ input:focus {
 
 #planet-color {
     width: 137px;
-    /* font-family: fantasy; */
     height: 30px;
     padding: 10px;
     font-size: 14px;
@@ -91,3 +97,39 @@ input:focus {
     box-shadow: none;
 }
 
+.playground-buttons {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.playground-buttons button {
+    background-color: white; 
+    padding: 5px 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    border-radius: 5px;
+    border: 3px solid white;
+}
+
+.playground-buttons button:hover {
+    cursor: pointer;
+    background: transparent;
+    color: white;
+}
+
+.playground-buttons button:focus {
+    outline: none;
+}
+
+.playground-buttons i {
+    margin: 0px 3px;
+    font-size: 30px;
+}
+
+.playground-buttons strong {
+    margin-top: 3px;
+}

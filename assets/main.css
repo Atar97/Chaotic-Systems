@@ -1,21 +1,7 @@
-.all-content {
-    display: inline-flex;
-    padding: 25px;
-    flex-wrap: wrap;
-}
-
 body {
     background-image: url('../assets/astronomy-black-wallpaper-constellation-2150.jpg');
     background-size: 100%;
     background-repeat: repeat-y
-}
-
-.canvas-container {
-    width: 810px;
-    height: 510px;
-    display: block;
-    background: rgba(0,0,0,.9)
-    
 }
 
 nav {
@@ -26,29 +12,49 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
+    font-family: herculanum, fantasy;
 }
 
-nav a {
+a {
     font-family: herculanum, fantasy;
     text-decoration: none;
     margin-right: 5px;
     color: #AEB6BF;
 }
 
-nav a:hover {
+a:hover {
     color: white;
     cursor: pointer;
 }
 
 .home-link {
     color: white;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .home-link i {
-    margin-right: 3px;
+    margin-right: 10px;
 }
 
 button {
     font-family: fantasy;
+}
+
+.canvas-container {
+    background: rgba(0,0,0,.9);
+}
+
+.introduction {
+    margin: 10px 10%;
+}
+
+.text {
+    background-color: rgba(255, 255, 255, .7);
+    padding: 25px;
+}
+
+p {
+    font-family: Didot, serif;
+    font-size: 18px;
+    line-height: 20px;
 }
