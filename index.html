@@ -48,23 +48,23 @@
                     <h3>Add a Celestial Body</h3>
                     <label class="form-row">Mass
                         <div>
-                            <input placeholder="solar mass" type="text" id="mass"></input><i class="far fa-dot-circle"></i>
+                            <input type="range" min="1" max="100"  value="1" id="mass"></input><i class="far fa-dot-circle"></i>
                         </div> 
                     </label>
+                    <section class="vector-labels">
+                        <p id="x-label">X</p>
+                        <p id="y-label">Y</p>
+                    </section>
                     <label class="form-row">Initial Position
                         <div>
-                            <input class="vector-input" placeholder="x"
-                            id="six"></input>
-                            <input class="vector-input" placeholder="y"
-                            id="siy"></input>
+                            <input class="vector-input" type="range" min="1" max="100" id="six"></input>
+                            <input class="vector-input" type="range" min="1" max="100" id="siy"></input>
                         </div>
                     </label>
                     <label class="form-row">Initial Velocity
                         <div>
-                            <input class="vector-input" placeholder="x" 
-                            id="vix"></input>
-                            <input class="vector-input" placeholder="y"
-                            id="viy"></input>
+                            <input class="vector-input" type="range" min="1" max="100" id="vix"></input>
+                            <input class="vector-input" type="range" min="1" max="100" id="viy"></input>
                         </div>
                     </label>
 

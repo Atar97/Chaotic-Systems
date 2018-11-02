@@ -137,3 +137,18 @@ input:focus {
 .playground-buttons strong {
     margin-top: 3px;
 }
+
+.vector-labels {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 96px;
+}
+
+#y-label {
+
+}
+
+#x-label {
+    margin-right: 59px;
+}

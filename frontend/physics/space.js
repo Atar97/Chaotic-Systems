@@ -54,7 +54,7 @@ class Space {
     stepAtInterval(interval) {
         if (!this.handle) {
             this.handle = setInterval(() => {
-                this.stepAll(2)
+                this.stepAll(5)
                 this.drawAll()
             }, interval)
         }
