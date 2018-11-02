@@ -6,10 +6,9 @@ import { setInterval } from "timers";
 // G = 3.95E-8
 class Space {
     constructor(context, dimensions, bodies = []) {
-        this.bodies = bodies
-        this.ctx = context 
-        this.dimensions = dimensions
-        this.interval = null
+        this.bodies = bodies;
+        this.ctx = context;
+        this.dimensions = dimensions;
     }
 
     add(cBody) {
@@ -53,16 +52,18 @@ class Space {
     }
 
     stepAtInterval(interval) {
-        let i = 0;
-        this.interval = setInterval(() => {
-            this.stepAll(5)
-            this.drawAll()
-            i++ 
-        }, interval)
+        if (!this.handle) {
+            this.handle = setInterval(() => {
+                this.stepAll(2)
+                this.drawAll()
+            }, interval)
+        }
+    
     }
 
     stopStepping() {
-        clearInterval(this.interval)
+        clearInterval(this.handle.id);
+        this.handle = null;
     }
 }
 

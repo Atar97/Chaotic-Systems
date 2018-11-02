@@ -9,8 +9,7 @@ class PlaygroundButtons {
     start() {
         document.getElementById('start-sim')
         .addEventListener('click', () => {
-            this.space.stepAtInterval(1)
-            console.log('start')
+            this.space.stepAtInterval(5)
         })
     }
     
@@ -18,7 +17,6 @@ class PlaygroundButtons {
         document.getElementById('pause-sim')
         .addEventListener('click', () => {
             this.space.stopStepping()
-            console.log("pause");
         })
     }
 
@@ -27,7 +25,6 @@ class PlaygroundButtons {
         .addEventListener('click', () => {
             this.space.stopStepping()
             this.space.bodies = []
-            console.log("reset");
         })
     }
 }
