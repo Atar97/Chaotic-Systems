@@ -10,7 +10,7 @@ class PlaygroundButtons {
         document.getElementById('start-sim')
         .addEventListener('click', () => {
             if (!this.space.handle) {
-                this.space.integrate(5)
+                this.space.integrate(10)
             }
         })
     }

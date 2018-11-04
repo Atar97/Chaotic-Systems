@@ -235,7 +235,7 @@ function () {
 
       document.getElementById('start-sim').addEventListener('click', function () {
         if (!_this.space.handle) {
-          _this.space.integrate(5);
+          _this.space.integrate(10);
         }
       });
     }
