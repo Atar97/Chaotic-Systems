@@ -62,6 +62,12 @@ input:focus {
     height: 30px;
     padding: 10px;
     font-size: 14px;
+    border: 1px solid transparent;
+}
+
+.select:focus {
+    outline: none;
+    border: 1px solid #F7DC6F;
 }
 
 
@@ -142,13 +148,35 @@ input:focus {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    padding-right: 96px;
-}
-
-#y-label {
-
+    padding-right: 110px;
 }
 
 #x-label {
-    margin-right: 59px;
+    margin-right: 66px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    height: 2px;
+    background: black;
+    width: 70px;
+    padding: 0 2px;    
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    width: 10px; /* Set a specific slider handle width */
+    height: 10px; /* Slider handle height */
+    border-radius: 50%;
+    background: #F7DC6F; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+   -webkit-appearance: none; /* Override default look */
+    width: 10px; /* Set a specific slider handle width */
+    height: 10px; /* Slider handle height */
+    border-radius: 50%;
+    background: yellow; /* Green background */
+    cursor: pointer; /* Cursor on hover */
 }

@@ -56,8 +56,12 @@ class CBody {
             radius = 4;
         } else if (this.mass < 10){
             radius = 10;
-        } else if (this.mass < 50) {
+        } else if (this.mass < 25) {
+            radius = 15;
+        } else if (this.mass < 40) {
             radius = 20;
+        } else if (this.mass < 60) {
+            radius = 25;
         } else {
             radius = 30;
         }
