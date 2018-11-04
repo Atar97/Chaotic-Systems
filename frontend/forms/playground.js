@@ -9,21 +9,23 @@ class PlaygroundButtons {
     start() {
         document.getElementById('start-sim')
         .addEventListener('click', () => {
-            this.space.stepAtInterval(5)
+            if (!this.space.handle) {
+                this.space.integrate(5)
+            }
         })
     }
     
     pause() {
         document.getElementById('pause-sim')
         .addEventListener('click', () => {
-            this.space.stopStepping()
+            this.space.stopIntegration()
         })
     }
 
     reset() {
         document.getElementById('reset-sim')
         .addEventListener('click', () => {
-            this.space.stopStepping()
+            this.space.stopIntegration()
             this.space.bodies = []
         })
     }
