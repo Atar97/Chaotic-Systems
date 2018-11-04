@@ -12,6 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const bodyForm = new BodyForm(space)
     const starForm = new StarForm(space)
     const playgroundButtons = new PlaygroundButtons(space)
-    solarSystem.stepAtInterval(1)
+    solarSystem.stepAtInterval(10)
 })
 

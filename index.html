@@ -48,23 +48,23 @@
                     <h3>Add a Celestial Body</h3>
                     <label class="form-row">Mass
                         <div>
-                            <input placeholder="solar mass" type="text" id="mass"></input><i class="far fa-dot-circle"></i>
+                            <input type="range" min="1" max="100" value="1" id="mass" class="slider"></input><i class="far fa-dot-circle"></i>
                         </div> 
                     </label>
+                    <section class="vector-labels">
+                        <p id="x-label">X</p>
+                        <p id="y-label">Y</p>
+                    </section>
                     <label class="form-row">Initial Position
                         <div>
-                            <input class="vector-input" placeholder="x"
-                            id="six"></input>
-                            <input class="vector-input" placeholder="y"
-                            id="siy"></input>
+                            <input class="slider" type="range" min="-39" max="39" value="0" id="six"></input>
+                            <input class="slider" type="range" min="-24" max="24" value="0" id="siy"></input>
                         </div>
                     </label>
                     <label class="form-row">Initial Velocity
                         <div>
-                            <input class="vector-input" placeholder="x" 
-                            id="vix"></input>
-                            <input class="vector-input" placeholder="y"
-                            id="viy"></input>
+                            <input class="slider" type="range" min="-100" max="100" value="0" id="vix"></input>
+                            <input class="slider" type="range" min="-100" max="100" value="0" id="viy"></input>
                         </div>
                     </label>
 
@@ -82,13 +82,13 @@
                 </form>
                 <form id="star-form">
                     <h3>Add a Star</h3>
-                    <label class="form-row">Initial Position
-                        <div>
-                            <input class="vector-input" placeholder="x"
-                            id="star-six"></input>
-                            <input class="vector-input" placeholder="y"
-                            id="star-siy"></input>
-                        </div>
+                    <label class="form-row">Distance From Center
+                            <input class="slider" type="range" min="" max="25"
+                            id="star-distance" value="0"></input>
+                    </label>
+                    <label class="form-row">Initial Speed
+                            <input class="slider" type="range" min="0" max="100"
+                              id="star-speed" value="0"></input>
                     </label>
                     <label class="form-row">Star Type
                         <select class="select" id="star-type">
