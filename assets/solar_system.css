@@ -65,3 +65,21 @@
     position: relative;
     align-items: center;
 }
+
+#planet-detail p {
+    padding: 10px;
+}
+
+#planet-detail strong {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 6px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid white; 
+}
+
+#planet-detail h2 {
+    font-size: 35px;
+    margin: 15px 0;
+    text-align: center;
+}
