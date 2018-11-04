@@ -1,4 +1,5 @@
 import { setInterval } from "timers";
+import { request } from "https";
 
 // Earth distance from the sun 1.5E9
 // Solar Mass 2E30
@@ -49,6 +50,7 @@ class Space {
         this.bodies.forEach(body => {
             body.draw(this.ctx, this.dimensions);
         });
+        requestAnimationFrame(this.drawAll.bind(this))
     }
 
     stepAtInterval(interval) {
@@ -61,10 +63,24 @@ class Space {
     
     }
 
+    integrate(stepSize) {
+        this.stepAll(stepSize)
+        this.handle = setTimeout(() => this.integrate(stepSize), 0);
+    }
+
+    stopIntegration() {
+        clearTimeout(this.handle);
+    }
+
     stopStepping() {
         clearInterval(this.handle);
         this.handle = null;
     }
+
+    animate() {
+        requestAnimationFrame(this.drawAll.bind(this))
+    }
+
 }
 
 export default Space;

@@ -39,7 +39,6 @@ export default class BodyForm {
     getVelocity() {
         const vix = Number(document.getElementById("vix").value)/10000;
         const viy = Number(document.getElementById("viy").value)/10000;
-        debugger;
         return new Vector([vix, viy]);
     }
 }
