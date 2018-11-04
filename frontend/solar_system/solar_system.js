@@ -27,10 +27,30 @@ class SolarSystem extends Space {
 
     appendDetails(planetId) {
         const planet = constants.planets[planetId]
-        debugger;
         const planetDetail = document.getElementById('planet-detail')
-        planetDetail.getElementsByTagName('img')[0]
-        .setAttribute('src', planet.img)
+        this.updateImage(planetDetail, planet)
+        this.updateName(planetDetail, planet)
+        this.updateDetails(planetDetail, planet)
+    }
+
+    updateImage(detailDOMel, planet) {
+        detailDOMel.getElementsByTagName('img')[0]
+            .setAttribute('src', planet.img)
+    }
+
+    updateName(detailDOMel, planet) {
+        const name = detailDOMel.getElementsByTagName('h2')[0]
+         name.innerHTML = planet.name;
+    }
+    
+    updateDetails(detailDOMel, planet) {
+        const details = detailDOMel.getElementsByTagName('p')
+        details[0].innerHTML = `${Math.round(planet.mass * constants.solarMass)} kg`; 
+        details[1].innerHTML = `${Math.round(planet.orbit * 100)/100} AU`;
+        details[2].innerHTML = `${Math.round(constants.scaleSpeed(
+            planet.orbitSpeed, 
+            1 / constants.AU, 
+            1 / 3600))} m/s`;
     }
 
     addEventListeners() {
