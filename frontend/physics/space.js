@@ -50,9 +50,7 @@ class Space {
 
     integrate(stepSize) {
         this.stepAll(stepSize);
-        if (!this.handle) {
-            this.handle = setTimeout(() => this.integrate(stepSize), 0);
-        }
+        this.handle = setTimeout(() => this.integrate(stepSize), 0);
     }
 
     stopIntegration() {

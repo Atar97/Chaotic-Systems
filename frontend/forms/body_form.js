@@ -23,7 +23,7 @@ export default class BodyForm {
     }
     
     getMass() {
-        let mass = Number(document.getElementById("mass").value);
+        let mass = Number(document.getElementById("mass").value)/100;
         if (mass == 0) {
             mass = 1;
         }
