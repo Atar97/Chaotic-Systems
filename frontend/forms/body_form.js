@@ -23,7 +23,7 @@ export default class BodyForm {
     }
     
     getMass() {
-        let mass = Number(document.getElementById("mass").value);
+        let mass = Number(document.getElementById("mass").value)/100;
         if (mass == 0) {
             mass = 1;
         }
@@ -37,8 +37,8 @@ export default class BodyForm {
     }
     
     getVelocity() {
-        const vix = Number(document.getElementById("vix").value);
-        const viy = Number(document.getElementById("viy").value);
+        const vix = Number(document.getElementById("vix").value)/10000;
+        const viy = Number(document.getElementById("viy").value)/10000;
         return new Vector([vix, viy]);
     }
 }

@@ -56,6 +56,22 @@ class Vector {
         return result
     }
 
+    static randomUnit() {
+        let x = Math.random()
+        if (Math.random() < .5) {
+            x *= -1
+        }
+        let y = Math.sqrt(1 - x*x)
+        if (Math.random() < .5) {
+            y*= -1
+        }
+        return new Vector([x, y])
+    }
+
+    static randomVector(length) {
+        return this.randomUnit().scale(length)
+    }
+
 }
 
 export default Vector;

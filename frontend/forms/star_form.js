@@ -21,35 +21,28 @@ export default class StarForm {
         this.space.drawAll() 
     }
 
+    getVelocity() {
+        const speed = Number(document.getElementById("star-speed").value)/10000;
+        return Vector.randomVector(speed);
+    }
+
     getPosition() {
-        const six = Number(document.getElementById("star-six").value);
-        const siy = Number(document.getElementById("star-siy").value);
-        return new Vector([six, siy]);
+        const distance = Number(document.getElementById("star-distance").value);
+        debugger;
+        return Vector.randomVector(distance);
     }
 
     getType() {
         const type = document.getElementById("star-type").value 
         switch (type) {
             case 'yd':
-                return {
-                    mass: 1,
-                    color: 'yellow'
-                }
+                return { mass: 1, color: "#FFD800" };
             case 'bg':
-                return {
-                    mass: 10,
-                    color: 'blue'
-                }
+                return { mass: 10, color: "#8FBDF0" };
             case 'bsg':
-                return {
-                    mass: 60,
-                    color: 'blue'
-                }
+                return { mass: 60, color: "#3FA0F1" };
             case 'rd':
-                return {
-                    mass: .5,
-                    color: 'red'
-                }
+                return { mass: 0.5, color: "#E53502" };
         }
     }
 }
