@@ -325,7 +325,6 @@ function () {
     key: "getPosition",
     value: function getPosition() {
       var distance = Number(document.getElementById("star-distance").value);
-      debugger;
       return _physics_vector__WEBPACK_IMPORTED_MODULE_0__["default"].randomVector(distance);
     }
   }, {

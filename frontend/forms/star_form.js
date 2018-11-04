@@ -28,7 +28,6 @@ export default class StarForm {
 
     getPosition() {
         const distance = Number(document.getElementById("star-distance").value);
-        debugger;
         return Vector.randomVector(distance);
     }
 
