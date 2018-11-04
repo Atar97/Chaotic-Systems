@@ -45,7 +45,8 @@ class SolarSystem extends Space {
     
     updateDetails(detailDOMel, planet) {
         const details = detailDOMel.getElementsByTagName('p')
-        details[0].innerHTML = `${Math.round(planet.mass * constants.solarMass).toExponential()} kg`; 
+        details[0].innerHTML = `${Math.round(planet.mass * constants.solarMass)
+            .toExponential()} kg`; 
         details[1].innerHTML = `${Math.round(planet.orbit * 100)/100} AU`;
         details[2].innerHTML = `${Math.round(constants.scaleSpeed(
             planet.orbitSpeed, 
